@@ -21,14 +21,13 @@ h1{
 
 `
 
-const ReleaseCard = ({ version, release, categoryTitle, taskAmount, amountStatus }) =>{
+const ReleaseCard = ({ version, release, categoryTitle, taskAmount, amountStatus, children }) =>{
 
     return(
         <StyledReleaseCard>
             <h1>{version}</h1>
             <p>{release}</p>
-            <Category categoryTitle={categoryTitle} taskAmount={taskAmount} amountStatus={amountStatus}/>
-            <Category categoryTitle={categoryTitle} taskAmount={taskAmount} amountStatus={amountStatus}/>
+            {children}
         </StyledReleaseCard>
     )
 }

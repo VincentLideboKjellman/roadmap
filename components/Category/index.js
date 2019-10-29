@@ -24,7 +24,7 @@ background-color:red;
 
 `
 
-const Category = ({ categoryTitle, amountStatus, taskAmount }) => {
+const Category = ({ categoryTitle, amountStatus, entryAmount }) => {
 
     return(
         <StyledCategory>
@@ -33,7 +33,7 @@ const Category = ({ categoryTitle, amountStatus, taskAmount }) => {
             </div>
             <div className="category-header-info">
                 <div>
-                    {taskAmount}
+                    {entryAmount}
                 </div>
                 <div>
                     {amountStatus}
