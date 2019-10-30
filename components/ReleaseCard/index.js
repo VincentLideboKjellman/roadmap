@@ -21,7 +21,7 @@ h1{
 
 `
 
-const ReleaseCard = ({ version, release, categoryTitle, taskAmount, amountStatus, children }) =>{
+const ReleaseCard = ({ version, release, children }) =>{
 
     return(
         <StyledReleaseCard>
