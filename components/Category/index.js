@@ -4,8 +4,10 @@ import styled from 'styled-components';
 const StyledCategory = styled.div`
 
 width:100%;
-margin:16px;
-background-color:red;
+margin:0 16px 16px 16px;
+background-color: #008755;
+color:white;
+border: 1px solid black;
 
 .category-header{
     display:flex;

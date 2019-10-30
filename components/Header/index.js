@@ -51,6 +51,13 @@ img{
     border-bottom: 5px solid #f2a900;
 }
 
+.add-button{
+    font-size: 1.7em;
+}
+.header > .header-item-add{
+    background-color: #71b2c9;
+    border-bottom: 5px solid #71b2c9;
+}
 
 
 `
@@ -64,7 +71,7 @@ const Header = ({ logo }) => {
                 <button className="selected-button" type="button">VGR-INTEGRATION</button>
                 <button className="header-item" type="button">VGR-DRIFT</button>
                 <button className="header-item" type="button">VGR-UNDERHÅLLNING</button>
-                <button className="header-item" type="button">+</button>
+                <button className="header-item-add" type="button"><span className="add-button">+</span></button>
             </div>
         </StyledHeader>
     )

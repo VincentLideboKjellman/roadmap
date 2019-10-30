@@ -22,11 +22,19 @@ const  Roadmap = () => {
                     {/* Here be printed out loop(array) */}
                     <Category categoryTitle="Security" amountStatus="2 in development" entryAmount="Entries: 2" >
                         <Entry  
-                            entryHeader="Adding firewalls"
+                            entryHeader="Add firewalls"
                             tasksCompleted="2/7 Tasks completed"
                             status="In Development"
                             entrySummary="Setting up and applying firewalls to all VGR-IT servers."
                         />
+                        <Entry  
+                            entryHeader="Program Security measures"
+                            tasksCompleted="5/10 Tasks completed"
+                            status="In Development"
+                            entrySummary="Setting up and applying firewalls to all VGR-IT servers."
+                        />
+                    </Category>
+                    <Category categoryTitle="Servers" amountStatus="2 in development" entryAmount="Entries: 2" >
                     </Category>
                 </ReleaseCard>
 
