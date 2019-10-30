@@ -8,14 +8,14 @@ const StyledHeader = styled.div`
     height: 5vw;
     width:100%;
     background-color: #006298;
-    color: #bbbebe;
+    color: white;
     display:flex;
-    justify-content: space-around;
+    //justify-content: center;
     align-items: center;
 }
 
-.header > img{
-    width:15%;
+img{
+    width:100%;
 }
 
 .header > button{
@@ -26,20 +26,26 @@ const StyledHeader = styled.div`
     border: none;
     background-color: #006298;
     border-bottom: 5px solid #006298;
+    
+    padding-right: 16px;
+    padding-left: 16px;
 }
 .header > button:hover{
     height: 100%;
     border: none;
     background-color: #112F47;
     border-bottom: 5px solid #bbbebe;
+    transition: .15s ease-out;
 }
-
 
 .header > .selected-button{
     height: 100%;
     border: none;
     background-color: #112F47;
     border-bottom: 5px solid #f2a900;
+
+    padding-right: 16px;
+    padding-left: 16px;
 }
 .header > .selected-button:hover{
     border-bottom: 5px solid #f2a900;
@@ -53,12 +59,12 @@ const Header = ({ logo }) => {
 
     return(
         <StyledHeader>
+            <img src="./banner.png" alt="logo"/>
             <div className="header">
-                <img src="./logo.svg" alt="logo"/>
                 <button className="selected-button" type="button">VGR-INTEGRATION</button>
-                <button type="button">VGR-DRIFT</button>
-                <button type="button">+</button>
-                <button type="button">+</button>
+                <button className="header-item" type="button">VGR-DRIFT</button>
+                <button className="header-item" type="button">VGR-UNDERHÅLLNING</button>
+                <button className="header-item" type="button">+</button>
             </div>
         </StyledHeader>
     )
