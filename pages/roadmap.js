@@ -57,6 +57,9 @@ const Roadmap = () => {
                 padding: 0;
                 font-family: 'Varela Round', sans-serif;
             }
+
+            //Pallette
+            //https://coolors.co/000000-29354e-fca311-e5e5e5-ffffff
             `
         }</style>
     </>
