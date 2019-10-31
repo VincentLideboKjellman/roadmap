@@ -4,7 +4,9 @@ import styled from 'styled-components';
 
 const StyledReleaseCard = styled.div`
 width: 30%;
-background-color: #006298;
+background-color: #000000;
+
+border-radius: 5px;
 
 display: flex;
 justify-content: center;
@@ -13,6 +15,11 @@ flex-direction: column;
 
 margin:16px;
 padding:16px;
+
+&:hover{
+    box-shadow: 0px 0px 14px -1px rgba(0,0,0,0.75);
+    transition: .15s ease-out;
+}
 
 .release-header{
     display: flex;

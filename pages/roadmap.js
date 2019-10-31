@@ -52,6 +52,7 @@ const Roadmap = () => {
                 width: 100%;
             }
             body {
+                background-color: #E5E5E5;
                 margin: 0;
                 padding: 0;
                 font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",

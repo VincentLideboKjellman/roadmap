@@ -3,11 +3,10 @@ import styled from 'styled-components';
 
 const StyledHeader = styled.div`
 
-//#112F47 dark blue
 .header{
     height: 5vw;
     width:100%;
-    background-color: #006298;
+    background-color: #000000;
     color: white;
     display:flex;
     //justify-content: center;
@@ -24,8 +23,8 @@ img{
     //font-weight:bold;
     height: 100%;
     border: none;
-    background-color: #006298;
-    border-bottom: 5px solid #006298;
+    background-color: #000000;
+    border-bottom: 5px solid #FFFFFF;
     
     padding-right: 16px;
     padding-left: 16px;
@@ -33,30 +32,30 @@ img{
 .header > button:hover{
     height: 100%;
     border: none;
-    background-color: #112F47;
-    border-bottom: 5px solid #bbbebe;
+    background-color: #14213D;
+    border-bottom: 5px solid #FFFFFF;
     transition: .15s ease-out;
 }
 
 .header > .selected-button{
     height: 100%;
     border: none;
-    background-color: #112F47;
-    border-bottom: 5px solid #f2a900;
+    background-color: #14213D;
+    border-bottom: 5px solid #FCA311;
 
     padding-right: 16px;
     padding-left: 16px;
 }
 .header > .selected-button:hover{
-    border-bottom: 5px solid #f2a900;
+    border-bottom: 5px solid #FCA311;
 }
 
 .add-button{
     font-size: 1.7em;
 }
 .header > .header-item-add{
-    background-color: #71b2c9;
-    border-bottom: 5px solid #71b2c9;
+    background-color: #00000;
+    border-bottom: 5px solid #FFFFFF;
 }
 
 
@@ -66,7 +65,7 @@ const Header = ({ logo }) => {
 
     return(
         <StyledHeader>
-            <img src="./banner.png" alt="logo"/>
+            {/* <img src="./banner.png" alt="logo"/> */}
             <div className="header">
                 <button className="selected-button" type="button">VGR-INTEGRATION</button>
                 <button className="header-item" type="button">VGR-DRIFT</button>
