@@ -2,20 +2,28 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledEntry = styled.div`
-background-color: #bbbebe;
+background-color: #29354E;
 
 display:flex;
 justfiy-content: center;
 align-items: center;
 
-color:black;
+border: 1px solid #E5E5E5;
+border-radius: 5px;
+
+color:#FFFFFF;
 margin:16px;
+
+text-align:center;
 
 .entry-container{
     display:flex;
     justify-content: center;
     align-items: center;
     flex-direction:column;
+}
+.entry-item{
+    margin:16px;
 }
 `
 
@@ -24,7 +32,7 @@ const Entry = ({ entryHeader, image, tasksCompleted, status, entrySummary }) => 
     return(
         <StyledEntry>
             <div className="entry-container">
-                <h3>{entryHeader}</h3>
+                <h4 className="entry-item">{entryHeader}</h4>
                 <img src={image}></img>
                 <div>
                     {tasksCompleted}
@@ -32,7 +40,9 @@ const Entry = ({ entryHeader, image, tasksCompleted, status, entrySummary }) => 
                 <div>
                     status: {status}
                 </div>
-                <div>{entrySummary}</div>
+                <div className="entry-item">
+                {entrySummary}
+                </div>
             </div>
         </StyledEntry>
     )
