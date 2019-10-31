@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState }from 'react';
 import styled from 'styled-components';
 
 const StyledCategory = styled.div`
@@ -28,12 +28,22 @@ border: 1px solid black;
 
 const Category = ({ categoryTitle, amountStatus, entryAmount, children }) => {
 
+    const [toggleState, setToggleState] = useState(false);
+
+    const toggleCard = () => {
+        if(toggleState === false){
+            setToggleState(true);
+        } else if (toggleState === true){
+            setToggleState(false);
+        }
+    } 
+
     return(
         <StyledCategory>
-            <div className="category-header">
+            <div  onClick={()=>{toggleCard();}} className="category-header">
                 {categoryTitle}
             </div>
-            <div className="category-header-info">
+            <div onClick={()=>{toggleCard();}} className="category-header-info">
                 <div>
                     {entryAmount}
                 </div>
@@ -41,8 +51,13 @@ const Category = ({ categoryTitle, amountStatus, entryAmount, children }) => {
                     {amountStatus}
                 </div>
             </div>
+
             <div>
-                {children}
+                {toggleState===true && 
+                    <>
+                    {children}
+                    </>
+                }
             </div>
         </StyledCategory>
     );

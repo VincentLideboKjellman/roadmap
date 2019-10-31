@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 
@@ -39,15 +39,23 @@ padding:16px;
 
 const ReleaseCard = ({ version, release, children }) =>{
 
-    const [toggle, setToggle] = useState(false);
+    const [toggleState, setToggleState] = useState(false);
+
+    const toggleCard = () => {
+        if(toggleState === false){
+            setToggleState(true);
+        } else if (toggleState === true){
+            setToggleState(false);
+        }
+    } 
 
     return(
         <StyledReleaseCard>
-            <div onClick={()=>{setToggle(true)}} className="release-header">
+            <div onClick={()=>{toggleCard();}} className="release-header">
                 <h2 className="version-heading">{version}</h2>
                 <h3 className="release-heading" >{release}</h3>
             </div>
-            {toggle===true &&
+            {toggleState===true &&
                 <>
                 {children}
                 </>
