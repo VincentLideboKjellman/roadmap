@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import Category from '../Category';
 
 
 const StyledReleaseCard = styled.div`
@@ -40,13 +39,19 @@ padding:16px;
 
 const ReleaseCard = ({ version, release, children }) =>{
 
+    const [toggle, setToggle] = useState(false);
+
     return(
         <StyledReleaseCard>
-            <div className="release-header">
+            <div onClick={()=>{setToggle(true)}} className="release-header">
                 <h2 className="version-heading">{version}</h2>
                 <h3 className="release-heading" >{release}</h3>
             </div>
-            {children}
+            {toggle===true &&
+                <>
+                {children}
+                </>
+            }
         </StyledReleaseCard>
     )
 }
