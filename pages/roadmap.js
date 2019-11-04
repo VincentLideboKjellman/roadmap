@@ -22,7 +22,7 @@ const Roadmap = () => {
     };
 
     useEffect(()=>{
-        fetchData
+        fetchData();
     }, []);
 
     return(
