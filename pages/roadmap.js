@@ -33,6 +33,23 @@ const Roadmap = () => {
                     <link rel='icon' href='/favicon.ico' />
                 </Head>
                 <Header/>
+
+                {/* mapping jira data into components */}
+
+                {/* {jiraData.map(releaseCard => (
+                    <ReleaseCard>
+                        {jiraData.map(category =>(
+                            <Category>
+                                {jiraData.map(entry => (
+                                    <Entry></Entry>
+                                ))}
+                            </Category>
+                        ))};                
+                    </ReleaseCard>
+                ))}; */}
+
+                {/* End, below is an example */}
+
                 <ReleaseCard version="1.1" release="2019 Q4" >
                     {/* Here be printed out loop(array) */}
                     <Category categoryTitle="Security" amountStatus="2 in development" entryAmount="Entries: 2" >
