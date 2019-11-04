@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 //import styled from 'styled-components';
 import Container from '../components/Container';
 import Header from '../components/Header';
@@ -9,6 +9,21 @@ import Entry from '../components/Entry';
 import GlobalStyle from '../styles/GlobalStyle';
 
 const Roadmap = () => {
+
+    const [hasErrors, setHasErrors]= useState(false);
+    const [jiraData, setJiraData] = useState({});
+
+    async function fetchData() {
+        const res = await fetch("JIRA STUFF");
+        res
+        .json()
+        .then(res => setJiraData(res))
+        .catch(err => setHasErrors(err));
+    };
+
+    useEffect(()=>{
+        fetchData
+    });
 
     return(
         <>
