@@ -14,11 +14,24 @@ const Roadmap = () => {
     const [jiraData, setJiraData] = useState({});
 
     async function fetchData() {
-        const res = await fetch("JIRA STUFF");
-        res
-        .json()
-        .then(res => setJiraData(res))
-        .catch(err => setHasErrors(err));
+        //let headers = {"Content-Type": "application/json"};
+        // const response = await fetch("https://vgregionit.atlassian.net/rest/agile/latest/board/91/sprint");
+        // response.json()
+        // .then(response => setJiraData(response))
+        // .catch(err => setHasErrors(err));
+    
+        fetch('https://vgregionit.atlassian.net/rest/agile/latest/board/91/sprint', {
+            mode: 'cors',
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+              },
+            auth: { username: 'vincent.lidebo.kjellman@gmail.com', password: 'ebbaBYC2er515AQoSAwwF1BF' },
+
+          })
+          .then(response => response.json())
+          .then(console.log);
     };
 
     useEffect(()=>{
