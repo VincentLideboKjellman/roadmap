@@ -7,11 +7,15 @@ import ReleaseCard from '../components/ReleaseCard';
 import Category from '../components/Category';
 import Entry from '../components/Entry';
 import GlobalStyle from '../styles/GlobalStyle';
+import base64 from 'base-64';
+
 
 const Roadmap = () => {
 
     const [hasErrors, setHasErrors]= useState(false);
     const [jiraData, setJiraData] = useState({});
+    //ebbaBYC2er515AQoSAwwF1BF
+
 
     async function fetchData() {
         //let headers = {"Content-Type": "application/json"};
@@ -19,16 +23,22 @@ const Roadmap = () => {
         // response.json()
         // .then(response => setJiraData(response))
         // .catch(err => setHasErrors(err));
-    
-        fetch('https://vgregionit.atlassian.net/rest/agile/latest/board/91/sprint', {
+     
+        fetch('https://vgregionit.atlassian.net/rest/agile/1.0/board/91/sprint', {
             mode: 'cors',
             method: 'GET',
             headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json',
+                "Content-Type": "application/json",
+                "Accept": "application/json",
+                "Authorization": "Basic dmluY2VudC5saWRlYm8ua2plbGxtYW5AZ21haWwuY29tOmViYmFCWUMyZXI1MTVBUW9TQXd3RjFCRg==",
+                "User-Agent": "PostmanRuntime/7.11.0",
+                "Cache-Control": "no-cache",
+                "Host": "vgregionit.atlassian.net",
+                "cookie": "atlassian.xsrf.token=BZL1-0CCM-D4SP-1O07_a1fd64ac6b8bbf2164c72826f3310421bfd5f96d_lin",
+                "accept-encoding": "gzip, deflate",
+                "Connection": "keep-alive",
+                "cache-control": "no-cache"
               },
-            auth: { username: 'vincent.lidebo.kjellman@gmail.com', password: 'ebbaBYC2er515AQoSAwwF1BF' },
-
           })
           .then(response => response.json())
           .then(console.log);
@@ -37,6 +47,8 @@ const Roadmap = () => {
     useEffect(()=>{
         fetchData();
     }, []);
+
+
 
     return(
         <>

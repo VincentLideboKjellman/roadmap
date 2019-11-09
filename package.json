@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "base-64": "^0.1.0",
     "eslint": "^6.5.1",
     "next": "9.1.1",
     "react": "16.11.0",
